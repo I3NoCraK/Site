@@ -180,142 +180,147 @@ footer {
 <body>
 
 <nav>
-    <div style="color:#fff;font-weight:600;">I3</div>
-    <div>
-        <a href="#sobre">ABOUT</a>
-        <a href="#coreflex">COREFLEX</a>
-        <a href="#projetos">PROJECTS</a>
-        <a href="#tech">STACK</a>
-        <a href="#contato">CONTACT</a>
-    </div>
+<div style="color:#fff;font-weight:600;">I3</div>
+<div>
+<a href="#sobre">ABOUT</a>
+<a href="#coreflex">COREFLEX</a>
+<a href="#projetos">PROJECTS</a>
+<a href="#tech">STACK</a>
+<a href="#contato">CONTACT</a>
+<a href="#saga">SAGA</a>
+</div>
 </nav>
 
 <div class="hero">
-    <h1>CoreFlex</h1>
-    <p>MODULAR ROBLOX FRAMEWORK • CLIENT / SERVER ARCHITECTURE • SYSTEM ENGINE</p>
-    <a class="btn" href="#coreflex">UNDERSTAND CORE</a>
+<h1>CoreFlex</h1>
+<p>MODULAR ROBLOX FRAMEWORK • CLIENT / SERVER ARCHITECTURE • SYSTEM ENGINE</p>
+<a class="btn" href="#coreflex">UNDERSTAND CORE</a>
 </div>
 
 <section id="profile">
-    <h2>PROFILE</h2>
-
-    <div class="card profile-card">
-        <img id="avatar" src="" alt="avatar">
-
-        <div class="profile-info">
-            <h3 style="color:#fff;">I3_NoPrime</h3>
-            <p>Discord: i3_nocb</p>
-            <button class="copy-btn" onclick="copyDiscord()">COPY DISCORD</button>
-            <p style="margin-top:8px;">Roblox: I3_NoPrime</p>
-        </div>
-    </div>
+<h2>PROFILE</h2>
+<div class="card profile-card">
+<img id="avatar" src="" alt="avatar">
+<div class="profile-info">
+<h3 style="color:#fff;">I3_NoPrime</h3>
+<p>Discord: i3_nocb</p>
+<button class="copy-btn" onclick="copyDiscord()">COPY DISCORD</button>
+<p style="margin-top:8px;">Roblox: I3_NoPrime</p>
+</div>
+</div>
 </section>
 
 <section id="sobre">
-    <h2>ABOUT</h2>
-    <div class="card">
-        Roblox developer focused on scalable systems, architecture design, and framework engineering.
-    </div>
+<h2>ABOUT</h2>
+<div class="card">
+Roblox developer focused on scalable systems, architecture design, and framework engineering.
+</div>
 </section>
 
 <section id="coreflex">
-    <h2>COREFLEX ARCHITECTURE</h2>
+<h2>COREFLEX ARCHITECTURE</h2>
+<div class="code-box">
+CoreFlex is a modular Roblox framework built to bring software-grade structure into game development.
 
-    <div class="code-box">
-CoreFlex is a modular Roblox framework designed to structure games like real software engines.
+1. SERVICES (Server Layer)
+- Game logic, data, backend rules
+- ServerScriptService
 
-It separates the project into 3 main layers:
-
-1. SERVICES (Server Side)
-- Handles global game logic
-- Player data, systems, backend rules
-- Runs in ServerScriptService
-
-2. CONTROLLERS (Client Side)
-- Handles player experience
-- UI, inputs, camera, local systems
-- Runs in StarterPlayerScripts
+2. CONTROLLERS (Client Layer)
+- UI, input, camera, local systems
+- StarterPlayerScripts
 
 3. COMMUNICATION LAYER
-- RemoteEvents / RemoteFunctions abstraction
-- Ensures clean client-server communication
+- RemoteEvents abstraction
+- Clean client-server flow
 
 FLOW:
-Client Controllers → Communication Layer → Server Services → Response back
+Client → Communication → Server → Response
 
-CORE IDEA:
-Instead of messy scripts everywhere,
-CoreFlex enforces structure, scalability and maintainability.
-    </div>
+RESULT:
+A scalable and maintainable game architecture foundation.
+</div>
+</section>
+
+<section id="saga">
+<h2>PARTNER PORTFOLIO</h2>
+<div class="card">
+<h3 style="color:#fff;">Saga Portfolio</h3>
+<p style="margin-top:10px; color:#888;">
+A more advanced and production-focused developer portfolio hosted by Saga.
+</p>
+<p style="margin-top:10px; color:#888;">
+It demonstrates professional-level systems and shows CoreFlex in real structured environments.
+</p>
+<a class="btn" href="https://discord.gg/ZvDWc5ye9Y" target="_blank" style="display:inline-block; margin-top:15px;">
+VISIT SAGA PORTFOLIO
+</a>
+</div>
 </section>
 
 <section id="projetos">
-    <h2>PROJECTS</h2>
-
-    <div class="grid">
-        <div class="card">
-            <h3>CoreFlex Framework</h3>
-            <p>Modular architecture with Services, Controllers and structured communication.</p>
-        </div>
-
-        <div class="card">
-            <h3>UI System</h3>
-            <p>Client-side UI controller system for scalable interfaces.</p>
-        </div>
-
-        <div class="card">
-            <h3>Game Architecture</h3>
-            <p>High-performance client/server system design.</p>
-        </div>
-    </div>
+<h2>PROJECTS</h2>
+<div class="grid">
+<div class="card">
+<h3>CoreFlex Framework</h3>
+<p>Modular architecture with structured services and controllers.</p>
+</div>
+<div class="card">
+<h3>UI System</h3>
+<p>Scalable client-side UI controller system.</p>
+</div>
+<div class="card">
+<h3>Game Architecture</h3>
+<p>High-performance client-server design.</p>
+</div>
+</div>
 </section>
 
 <section id="tech">
-    <h2>STACK</h2>
-
-    <div class="grid">
-        <div class="card">Lua / Luau</div>
-        <div class="card">Roblox Studio</div>
-        <div class="card">System Design</div>
-        <div class="card">OOP Architecture</div>
-        <div class="card">Client / Server</div>
-        <div class="card">UI Engineering</div>
-    </div>
+<h2>STACK</h2>
+<div class="grid">
+<div class="card">Lua / Luau</div>
+<div class="card">Roblox Studio</div>
+<div class="card">System Design</div>
+<div class="card">OOP Architecture</div>
+<div class="card">Client / Server</div>
+<div class="card">UI Engineering</div>
+</div>
 </section>
 
 <section id="contato">
-    <h2>CONTACT</h2>
-    <div class="card">
-        GitHub: <span style="color:#00aaff;">I3NoCraK</span>
-    </div>
+<h2>CONTACT</h2>
+<div class="card">
+GitHub: <span style="color:#00aaff;">I3NoCraK</span>
+</div>
 </section>
 
 <footer>
-    © 2026 I3 — SYSTEM ENGINEER PORTFOLIO
+© 2026 I3 — SYSTEM ENGINEER PORTFOLIO
 </footer>
 
 <script>
 async function loadAvatar() {
-    const username = "I3_NoPrime";
+const username = "I3_NoPrime";
 
-    const res = await fetch("https://users.roblox.com/v1/usernames/users", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            usernames: [username],
-            excludeBannedUsers: true
-        })
-    });
+const res = await fetch("https://users.roblox.com/v1/usernames/users", {
+method: "POST",
+headers: { "Content-Type": "application/json" },
+body: JSON.stringify({
+usernames: [username],
+excludeBannedUsers: true
+})
+});
 
-    const data = await res.json();
-    const id = data.data[0].id;
+const data = await res.json();
+const id = data.data[0].id;
 
-    document.getElementById("avatar").src =
-        `https://www.roblox.com/headshot-thumbnail/image?userId=${id}&width=420&height=420&format=png`;
+document.getElementById("avatar").src =
+`https://www.roblox.com/headshot-thumbnail/image?userId=${id}&width=420&height=420&format=png`;
 }
 
 function copyDiscord() {
-    navigator.clipboard.writeText("i3_nocb");
+navigator.clipboard.writeText("i3_nocb");
 }
 
 loadAvatar();
