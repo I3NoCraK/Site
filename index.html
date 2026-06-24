@@ -17,10 +17,11 @@
 }
 
 body {
-    background: #05070d;
+    background: radial-gradient(circle at top, #0a1020 0%, #05070d 60%);
     color: #e6e6e6;
 }
 
+/* NAV */
 nav {
     position: fixed;
     top: 0;
@@ -28,9 +29,9 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 18px 50px;
-    background: rgba(10, 12, 18, 0.8);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    background: rgba(10, 12, 18, 0.6);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(0,170,255,0.15);
     z-index: 1000;
 }
 
@@ -38,15 +39,17 @@ nav a {
     color: #aaa;
     text-decoration: none;
     margin-left: 20px;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 1px;
     transition: 0.2s;
 }
 
 nav a:hover {
     color: #00aaff;
+    text-shadow: 0 0 10px #00aaff;
 }
 
+/* HERO */
 .hero {
     height: 100vh;
     display: flex;
@@ -57,92 +60,101 @@ nav a:hover {
 }
 
 .hero h1 {
-    font-size: 64px;
+    font-size: 70px;
     font-weight: 800;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(0,170,255,0.25);
 }
 
 .hero p {
     margin-top: 10px;
     color: #888;
-    font-size: 15px;
+    font-size: 14px;
+    letter-spacing: 2px;
 }
 
 .btn {
     margin-top: 25px;
-    padding: 12px 20px;
+    padding: 12px 22px;
     border: 1px solid #00aaff;
     color: #00aaff;
     text-decoration: none;
     transition: 0.3s;
     letter-spacing: 1px;
+    box-shadow: 0 0 10px rgba(0,170,255,0.15);
 }
 
 .btn:hover {
     background: #00aaff;
     color: #000;
+    box-shadow: 0 0 25px rgba(0,170,255,0.4);
+    transform: translateY(-2px);
 }
 
+/* SECTIONS */
 section {
     padding: 90px 18%;
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 25px;
     color: #fff;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(0,170,255,0.15);
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 18px;
-}
-
+/* CARDS */
 .card {
-    background: #0b0f18;
-    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(11, 15, 24, 0.7);
+    border: 1px solid rgba(0,170,255,0.1);
     padding: 20px;
     transition: 0.25s;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0,170,255,0.08), transparent 60%);
+    transform: rotate(25deg);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.card:hover::before {
+    opacity: 1;
 }
 
 .card:hover {
     transform: translateY(-6px);
     border-color: #00aaff;
+    box-shadow: 0 0 25px rgba(0,170,255,0.15);
 }
 
-.card h3 {
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.card p {
-    color: #888;
-    font-size: 14px;
-}
-
+/* PROFILE */
 .profile-card {
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 22px;
-    border: 1px solid rgba(255,255,255,0.08);
 }
 
 .profile-card img {
     width: 95px;
     height: 95px;
-    border-radius: 10px;
+    border-radius: 12px;
     border: 1px solid #00aaff;
+    box-shadow: 0 0 15px rgba(0,170,255,0.2);
 }
 
-.profile-info p {
-    color: #888;
-    font-size: 14px;
-    margin-top: 4px;
-}
-
+/* BUTTON COPY */
 .copy-btn {
     margin-top: 10px;
     padding: 8px 12px;
@@ -156,23 +168,34 @@ h2 {
 .copy-btn:hover {
     background: #00aaff;
     color: #000;
+    box-shadow: 0 0 15px rgba(0,170,255,0.3);
 }
 
+/* CODE BOX */
 .code-box {
-    background: #070a12;
-    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(7, 10, 18, 0.8);
+    border: 1px solid rgba(0,170,255,0.1);
     padding: 20px;
     color: #aaa;
     font-size: 14px;
     line-height: 1.6;
+    box-shadow: inset 0 0 20px rgba(0,170,255,0.05);
 }
 
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+/* FOOTER */
 footer {
     text-align: center;
     padding: 50px;
     color: #555;
     font-size: 12px;
-    border-top: 1px solid rgba(255,255,255,0.05);
+    border-top: 1px solid rgba(0,170,255,0.08);
 }
 </style>
 </head>
@@ -223,22 +246,12 @@ Roblox developer focused on scalable systems, architecture design, and framework
 CoreFlex is a modular Roblox framework built to bring software-grade structure into game development.
 
 1. SERVICES (Server Layer)
-- Game logic, data, backend rules
-- ServerScriptService
-
 2. CONTROLLERS (Client Layer)
-- UI, input, camera, local systems
-- StarterPlayerScripts
-
 3. COMMUNICATION LAYER
-- RemoteEvents abstraction
-- Clean client-server flow
 
-FLOW:
-Client → Communication → Server → Response
+FLOW: Client → Server → Response
 
-RESULT:
-A scalable and maintainable game architecture foundation.
+RESULT: Scalable architecture foundation.
 </div>
 </section>
 
@@ -247,12 +260,9 @@ A scalable and maintainable game architecture foundation.
 <div class="card">
 <h3 style="color:#fff;">Saga Portfolio</h3>
 <p style="margin-top:10px; color:#888;">
-A more advanced and production-focused developer portfolio hosted by Saga.
+Professional developer showcase with CoreFlex integration.
 </p>
-<p style="margin-top:10px; color:#888;">
-It demonstrates professional-level systems and shows CoreFlex in real structured environments.
-</p>
-<a class="btn" href="https://discord.gg/ZvDWc5ye9Y" target="_blank" style="display:inline-block; margin-top:15px;">
+<a class="btn" href="https://discord.gg/ZvDWc5ye9Y" target="_blank">
 VISIT SAGA PORTFOLIO
 </a>
 </div>
@@ -263,15 +273,15 @@ VISIT SAGA PORTFOLIO
 <div class="grid">
 <div class="card">
 <h3>CoreFlex Framework</h3>
-<p>Modular architecture with structured services and controllers.</p>
+<p>Modular system architecture.</p>
 </div>
 <div class="card">
 <h3>UI System</h3>
-<p>Scalable client-side UI controller system.</p>
+<p>Client-side controller UI engine.</p>
 </div>
 <div class="card">
 <h3>Game Architecture</h3>
-<p>High-performance client-server design.</p>
+<p>High-performance systems design.</p>
 </div>
 </div>
 </section>
@@ -306,10 +316,7 @@ const username = "I3_NoPrime";
 const res = await fetch("https://users.roblox.com/v1/usernames/users", {
 method: "POST",
 headers: { "Content-Type": "application/json" },
-body: JSON.stringify({
-usernames: [username],
-excludeBannedUsers: true
-})
+body: JSON.stringify({ usernames: [username], excludeBannedUsers: true })
 });
 
 const data = await res.json();
