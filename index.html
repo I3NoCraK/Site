@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I3 | Dev Portfolio</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #05070d;
+    color: #e6e6e6;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 50px;
+    background: rgba(10, 12, 18, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    z-index: 1000;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #00aaff;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    margin-top: 10px;
+    color: #888;
+    font-size: 15px;
+}
+
+.btn {
+    margin-top: 25px;
+    padding: 12px 20px;
+    border: 1px solid #00aaff;
+    color: #00aaff;
+    text-decoration: none;
+    transition: 0.3s;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background: #00aaff;
+    color: #000;
+}
+
+section {
+    padding: 90px 18%;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: #0b0f18;
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 20px;
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #00aaff;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.card p {
+    color: #888;
+    font-size: 14px;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 22px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.profile-card img {
+    width: 95px;
+    height: 95px;
+    border-radius: 10px;
+    border: 1px solid #00aaff;
+}
+
+.profile-info p {
+    color: #888;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.copy-btn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: 1px solid #00aaff;
+    background: transparent;
+    color: #00aaff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.copy-btn:hover {
+    background: #00aaff;
+    color: #000;
+}
+
+.code-box {
+    background: #070a12;
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 20px;
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 50px;
+    color: #555;
+    font-size: 12px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div style="color:#fff;font-weight:600;">I3</div>
+    <div>
+        <a href="#sobre">ABOUT</a>
+        <a href="#coreflex">COREFLEX</a>
+        <a href="#projetos">PROJECTS</a>
+        <a href="#tech">STACK</a>
+        <a href="#contato">CONTACT</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>CoreFlex</h1>
+    <p>MODULAR ROBLOX FRAMEWORK • CLIENT / SERVER ARCHITECTURE • SYSTEM ENGINE</p>
+    <a class="btn" href="#coreflex">UNDERSTAND CORE</a>
+</div>
+
+<section id="profile">
+    <h2>PROFILE</h2>
+
+    <div class="card profile-card">
+        <img id="avatar" src="" alt="avatar">
+
+        <div class="profile-info">
+            <h3 style="color:#fff;">I3_NoPrime</h3>
+            <p>Discord: i3_nocb</p>
+            <button class="copy-btn" onclick="copyDiscord()">COPY DISCORD</button>
+            <p style="margin-top:8px;">Roblox: I3_NoPrime</p>
+        </div>
+    </div>
+</section>
+
+<section id="sobre">
+    <h2>ABOUT</h2>
+    <div class="card">
+        Roblox developer focused on scalable systems, architecture design, and framework engineering.
+    </div>
+</section>
+
+<section id="coreflex">
+    <h2>COREFLEX ARCHITECTURE</h2>
+
+    <div class="code-box">
+CoreFlex is a modular Roblox framework designed to structure games like real software engines.
+
+It separates the project into 3 main layers:
+
+1. SERVICES (Server Side)
+- Handles global game logic
+- Player data, systems, backend rules
+- Runs in ServerScriptService
+
+2. CONTROLLERS (Client Side)
+- Handles player experience
+- UI, inputs, camera, local systems
+- Runs in StarterPlayerScripts
+
+3. COMMUNICATION LAYER
+- RemoteEvents / RemoteFunctions abstraction
+- Ensures clean client-server communication
+
+FLOW:
+Client Controllers → Communication Layer → Server Services → Response back
+
+CORE IDEA:
+Instead of messy scripts everywhere,
+CoreFlex enforces structure, scalability and maintainability.
+    </div>
+</section>
+
+<section id="projetos">
+    <h2>PROJECTS</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>CoreFlex Framework</h3>
+            <p>Modular architecture with Services, Controllers and structured communication.</p>
+        </div>
+
+        <div class="card">
+            <h3>UI System</h3>
+            <p>Client-side UI controller system for scalable interfaces.</p>
+        </div>
+
+        <div class="card">
+            <h3>Game Architecture</h3>
+            <p>High-performance client/server system design.</p>
+        </div>
+    </div>
+</section>
+
+<section id="tech">
+    <h2>STACK</h2>
+
+    <div class="grid">
+        <div class="card">Lua / Luau</div>
+        <div class="card">Roblox Studio</div>
+        <div class="card">System Design</div>
+        <div class="card">OOP Architecture</div>
+        <div class="card">Client / Server</div>
+        <div class="card">UI Engineering</div>
+    </div>
+</section>
+
+<section id="contato">
+    <h2>CONTACT</h2>
+    <div class="card">
+        GitHub: <span style="color:#00aaff;">I3NoCraK</span>
+    </div>
+</section>
+
+<footer>
+    © 2026 I3 — SYSTEM ENGINEER PORTFOLIO
+</footer>
+
+<script>
+async function loadAvatar() {
+    const username = "I3_NoPrime";
+
+    const res = await fetch("https://users.roblox.com/v1/usernames/users", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            usernames: [username],
+            excludeBannedUsers: true
+        })
+    });
+
+    const data = await res.json();
+    const id = data.data[0].id;
+
+    document.getElementById("avatar").src =
+        `https://www.roblox.com/headshot-thumbnail/image?userId=${id}&width=420&height=420&format=png`;
+}
+
+function copyDiscord() {
+    navigator.clipboard.writeText("i3_nocb");
+}
+
+loadAvatar();
+</script>
+
+</body>
+</html>
